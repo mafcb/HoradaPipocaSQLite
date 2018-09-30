@@ -1,0 +1,4 @@
+#Sun Sep 30 00:24:07 BRT 2018
+base.0=F\:\\Entrega 1\\HoradaPipoca02\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+path.0=classes.dex
+renamed.0=classes.dex
