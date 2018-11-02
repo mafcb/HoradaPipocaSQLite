@@ -8,7 +8,7 @@ public class Cliente implements Serializable {
     private String nome, email, diretor, data, genero, sinopse, pop, bilheteria, elenco;
 
 
-    public Cliente(int id, String nome, String email, String diretor, String data, String genero, String sinopse, String pop, String bilheteria, String elenco) {
+    public Cliente() {
 
         this.id = id;
         this.nome = nome;
@@ -63,7 +63,7 @@ public class Cliente implements Serializable {
         return genero;
     }
 
-    private void setGenero(String genero){
+    void setGenero(String genero){
         this.genero = genero;
     }
 
@@ -71,7 +71,7 @@ public class Cliente implements Serializable {
         return pop;
     }
 
-    private void setPop(String pop){
+    void setPop(String pop){
         this.pop = pop;
     }
 
