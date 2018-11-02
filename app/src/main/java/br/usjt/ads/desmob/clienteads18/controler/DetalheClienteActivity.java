@@ -11,7 +11,7 @@ import br.usjt.ads.desmob.clienteads18.model.Cliente;
 import br.usjt.ads.desmob.clienteads18.model.Util;
 
 public class DetalheClienteActivity extends Activity {
-    private TextView nome, diretor, data, genero, sinopse, pop, bilheteria;
+    private TextView nome, diretor, data, genero, sinopse, pop, bilheteria, elenco;
     private ImageView foto;
 
 
@@ -26,7 +26,9 @@ public class DetalheClienteActivity extends Activity {
         sinopse = findViewById(R.id.detalhe_txt_sinop);
         pop = findViewById(R.id.detalhe_txt_pop);
         bilheteria = findViewById(R.id.detalhe_txt_bil);
+        elenco = findViewById(R.id.detalhe_txt_elenco);
         foto = findViewById(R.id.detalhe_foto_cliente);
+
 
 
 
@@ -40,6 +42,7 @@ public class DetalheClienteActivity extends Activity {
         sinopse.setText(cliente.getSinopse().toString());
         pop.setText(cliente.getPop().toString());
         bilheteria.setText(cliente.getBilheteria().toString());
+        elenco.setText(cliente.getElenco().toString());
         foto.setImageDrawable(Util.getDrawable(this, cliente.getFigura()));
 
     }

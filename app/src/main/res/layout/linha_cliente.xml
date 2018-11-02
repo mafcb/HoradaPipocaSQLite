@@ -19,7 +19,7 @@
         android:textAppearance="@android:style/TextAppearance.Large"
         android:textStyle="bold"
         android:padding="5dp"
-        android:textColor="@color/colorb"
+        android:textColor="@color/cinzac"
         />
 
     <TextView
@@ -28,7 +28,7 @@
         android:id="@+id/linha_detalhe"
         android:layout_toRightOf="@id/foto_cliente"
         android:layout_below="@id/linha_nome"
-        android:textColor="@color/colorb"
+        android:textColor="@color/cinzac"
         android:padding="8dp"
         android:textAppearance="@android:style/TextAppearance.Small"
         android:textStyle="italic"

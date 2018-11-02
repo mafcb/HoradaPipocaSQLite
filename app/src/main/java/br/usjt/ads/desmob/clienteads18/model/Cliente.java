@@ -5,10 +5,10 @@ import java.io.Serializable;
 public class Cliente implements Serializable {
 
     private int id;
-    private String nome, email, diretor, data, genero, sinopse, pop, bilheteria;
+    private String nome, email, diretor, data, genero, sinopse, pop, bilheteria, elenco;
 
 
-    public Cliente(int id, String nome, String email, String diretor, String data, String genero, String sinopse, String pop, String bilheteria) {
+    public Cliente(int id, String nome, String email, String diretor, String data, String genero, String sinopse, String pop, String bilheteria, String elenco) {
 
         this.id = id;
         this.nome = nome;
@@ -19,6 +19,7 @@ public class Cliente implements Serializable {
         this.sinopse = sinopse;
         this.pop = pop;
         this.bilheteria = bilheteria;
+        this.elenco = elenco;
 
     }
 
@@ -90,6 +91,15 @@ public class Cliente implements Serializable {
         this.bilheteria = bilheteria;
     }
 
+    public String getElenco() {
+        return elenco;
+    }
+
+    public void setElenco(String elenco) {
+        this.elenco = elenco;
+    }
+
+
     public String getFigura(){
 
         String figura = email.replace('@', '_');
@@ -109,6 +119,7 @@ public class Cliente implements Serializable {
                 ", sinopse='" + sinopse + '\'' +
                 ", pop='" + pop + '\'' +
                 ", bilheteria='" + bilheteria + '\'' +
+                ", elenco='" + elenco + '\'' +
                 '}';
     }
 }

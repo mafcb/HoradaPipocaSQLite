@@ -549,7 +549,7 @@ public final class R {
      * <tr><td>barrier</td><td>2</td><td></td></tr>
      * <tr><td>chains</td><td>4</td><td></td></tr>
      * <tr><td>dimensions</td><td>8</td><td></td></tr>
-     * <tr><td>direct</td><td>1</td><td></td></tr>
+     * <tr><td>direct</td><td>1</td><td>for now only direct & barriers</td></tr>
      * <tr><td>none</td><td>0</td><td></td></tr>
      * <tr><td>standard</td><td>3</td><td></td></tr>
      * </table>
@@ -612,32 +612,33 @@ public final class R {
     public static final int detalhe_txt_bil=0x7f040004;
     public static final int detalhe_txt_data=0x7f040005;
     public static final int detalhe_txt_diretor=0x7f040006;
-    public static final int detalhe_txt_genero=0x7f040007;
-    public static final int detalhe_txt_nome=0x7f040008;
-    public static final int detalhe_txt_pop=0x7f040009;
-    public static final int detalhe_txt_sinop=0x7f04000a;
-    public static final int dimensions=0x7f04000b;
-    public static final int direct=0x7f04000c;
-    public static final int end=0x7f04000d;
-    public static final int foto_cliente=0x7f04000e;
-    public static final int gone=0x7f04000f;
-    public static final int invisible=0x7f040010;
-    public static final int left=0x7f040011;
-    public static final int linha_detalhe=0x7f040012;
-    public static final int linha_nome=0x7f040013;
-    public static final int lista_clientes=0x7f040014;
-    public static final int none=0x7f040015;
-    public static final int packed=0x7f040016;
-    public static final int parent=0x7f040017;
-    public static final int percent=0x7f040018;
-    public static final int right=0x7f040019;
-    public static final int spread=0x7f04001a;
-    public static final int spread_inside=0x7f04001b;
-    public static final int standard=0x7f04001c;
-    public static final int start=0x7f04001d;
-    public static final int top=0x7f04001e;
-    public static final int txt_busca=0x7f04001f;
-    public static final int wrap=0x7f040020;
+    public static final int detalhe_txt_elenco=0x7f040007;
+    public static final int detalhe_txt_genero=0x7f040008;
+    public static final int detalhe_txt_nome=0x7f040009;
+    public static final int detalhe_txt_pop=0x7f04000a;
+    public static final int detalhe_txt_sinop=0x7f04000b;
+    public static final int dimensions=0x7f04000c;
+    public static final int direct=0x7f04000d;
+    public static final int end=0x7f04000e;
+    public static final int foto_cliente=0x7f04000f;
+    public static final int gone=0x7f040010;
+    public static final int invisible=0x7f040011;
+    public static final int left=0x7f040012;
+    public static final int linha_detalhe=0x7f040013;
+    public static final int linha_nome=0x7f040014;
+    public static final int lista_clientes=0x7f040015;
+    public static final int none=0x7f040016;
+    public static final int packed=0x7f040017;
+    public static final int parent=0x7f040018;
+    public static final int percent=0x7f040019;
+    public static final int right=0x7f04001a;
+    public static final int spread=0x7f04001b;
+    public static final int spread_inside=0x7f04001c;
+    public static final int standard=0x7f04001d;
+    public static final int start=0x7f04001e;
+    public static final int top=0x7f04001f;
+    public static final int txt_busca=0x7f040020;
+    public static final int wrap=0x7f040021;
   }
   public static final class layout {
     public static final int activity_detalhe_cliente=0x7f050000;
@@ -656,11 +657,12 @@ public final class R {
     public static final int detalhe_bil=0x7f070002;
     public static final int detalhe_data=0x7f070003;
     public static final int detalhe_diretor=0x7f070004;
-    public static final int detalhe_genero=0x7f070005;
-    public static final int detalhe_nome=0x7f070006;
-    public static final int detalhe_pop=0x7f070007;
-    public static final int detalhe_sinop=0x7f070008;
-    public static final int dica_busca=0x7f070009;
+    public static final int detalhe_elenco=0x7f070005;
+    public static final int detalhe_genero=0x7f070006;
+    public static final int detalhe_nome=0x7f070007;
+    public static final int detalhe_pop=0x7f070008;
+    public static final int detalhe_sinop=0x7f070009;
+    public static final int dica_busca=0x7f07000a;
   }
   public static final class style {
     public static final int AppTheme=0x7f080000;
@@ -1675,7 +1677,7 @@ public final class R {
      * <tr><td>barrier</td><td>2</td><td></td></tr>
      * <tr><td>chains</td><td>4</td><td></td></tr>
      * <tr><td>dimensions</td><td>8</td><td></td></tr>
-     * <tr><td>direct</td><td>1</td><td></td></tr>
+     * <tr><td>direct</td><td>1</td><td>for now only direct & barriers</td></tr>
      * <tr><td>none</td><td>0</td><td></td></tr>
      * <tr><td>standard</td><td>3</td><td></td></tr>
      * </table>
