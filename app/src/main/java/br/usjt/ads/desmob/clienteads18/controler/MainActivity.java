@@ -1,6 +1,7 @@
 package br.usjt.ads.desmob.clienteads18.controler;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -14,6 +15,7 @@ import java.util.ArrayList;
 import br.usjt.ads.desmob.clienteads18.R;
 import br.usjt.ads.desmob.clienteads18.model.Cliente;
 import br.usjt.ads.desmob.clienteads18.model.ClienteDAO;
+import br.usjt.ads.desmob.clienteads18.model.ClienteDb;
 
 public class MainActivity extends Activity {
     public static final String CHAVE = "br.usjt.ads.desmob.clienteads18.controler.chave";
@@ -22,7 +24,7 @@ public class MainActivity extends Activity {
     public static final String HOST = "http://198.162.1.56:8080/app_poetas";
     public static final String CLIENTES = "br.usjt.ads.desmob.clienteads18.controller.clientes";
     Intent intent;
-
+    Context context;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,13 +37,15 @@ public class MainActivity extends Activity {
         Intent intent = new Intent(this, ListaClientesActivity.class);
         String texto = txtBusca.getText().toString();
         intent.putExtra(CHAVE, texto);
-        if(ClienteDAO.isConnected(this)) {
+        if (ClienteDAO.isConnected(this)) {
             new DownloadClientes().execute(HOST + URL);
         } else {
             Toast toast = Toast.makeText(this, "Rede indisponível!", Toast.LENGTH_LONG);
             toast.show();
+            new CarregaClientes().execute("clientes");
         }
     }
+
     private class DownloadClientes extends AsyncTask<String, Void, ArrayList<Cliente>> {
 
         @Override
@@ -54,9 +58,25 @@ public class MainActivity extends Activity {
             return new ArrayList<Cliente>();
         }
 
-        protected void onPostExecute(ArrayList<Cliente> clientes){
+        protected void onPostExecute(ArrayList<Cliente> clientes) {
             intent.putExtra(CLIENTES, clientes);
             startActivity(intent);
         }
     }
+
+    private class CarregaClientes extends AsyncTask<String, Void, ArrayList<Cliente>> {
+
+        @Override
+        protected ArrayList<Cliente> doInBackground(String... strings) {
+            ClienteDb db = new ClienteDb(context);
+            ArrayList<Cliente> clientes = db.listarClientes();
+            return clientes;
+        }
+
+        protected void onPostExecute(ArrayList<Cliente> clientes) {
+            intent.putExtra(CLIENTES, clientes);
+            startActivity(intent);
+        }
+    }
+
 }

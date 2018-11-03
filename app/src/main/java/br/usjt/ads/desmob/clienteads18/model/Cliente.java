@@ -5,14 +5,13 @@ import java.io.Serializable;
 public class Cliente implements Serializable {
 
     private int id;
-    private String nome, email, diretor, data, genero, sinopse, pop, bilheteria, elenco;
+    private String nome, diretor, data, genero, sinopse, pop, bilheteria, elenco, figura;
 
 
     public Cliente() {
 
         this.id = id;
         this.nome = nome;
-        this.email = email;
         this.diretor = diretor;
         this.data = data;
         this.genero = genero;
@@ -37,14 +36,6 @@ public class Cliente implements Serializable {
 
     public void setNome(String nome){
         this.nome = nome;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
     }
 
     public String getDiretor(){
@@ -99,12 +90,12 @@ public class Cliente implements Serializable {
         this.elenco = elenco;
     }
 
-
     public String getFigura(){
+        return this.figura;
+    }
 
-        String figura = email.replace('@', '_');
-        return figura.replace('.', '_');
-
+    public void setFigura(String figura){
+        this.figura = figura;
     }
 
 

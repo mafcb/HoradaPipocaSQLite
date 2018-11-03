@@ -43,7 +43,6 @@ public class ClienteDAO {
                 Cliente cliente = new Cliente();
                 cliente.setId(item.getInt("id"));
                 cliente.setNome(item.getString("nome"));
-                cliente.setEmail(item.getString("email"));
                 cliente.setDiretor(item.getString("diretor"));
                 cliente.setdata(item.getString("data"));
                 cliente.setGenero(item.getString("genero"));
@@ -51,6 +50,7 @@ public class ClienteDAO {
                 cliente.setPop(item.getString("popularidade"));
                 cliente.setBilheteria(item.getString("bilheteria"));
                 cliente.setElenco(item.getString("elenco"));
+                cliente.setFigura(item.getString("foto"));
                 clientes.add(cliente);
             }
         } catch (JSONException e) {
